@@ -4,12 +4,19 @@ on:
   workflow_dispatch:
   push:
   schedule:
-    - cron: 10 16 * * *
+    - cron: 8 9 * * *
 
 jobs:
   run:
     runs-on: ubuntu-latest
     steps:
+      - name: Set random delay
+        run: |
+          # 生成随机的延迟时间，范围是 0 到 3600 秒
+          RANDOM_DELAY=$((RANDOM % 3600))
+          echo "Sleeping for $RANDOM_DELAY seconds..."
+          sleep $RANDOM_DELAY
+
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
