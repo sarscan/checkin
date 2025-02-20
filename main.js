@@ -12,15 +12,16 @@ const glados = async () => {
       headers: { ...headers, 'content-type': 'application/json' },
       body: '{"token":"glados.one"}',
     }).then((r) => r.json())
-    const status = await fetch('https://glados.rocks/api/user/status', {
-      method: 'GET',
-      headers,
-    }).then((r) => r.json())
-    console.log('Checkin OK',checkin.message,status.data.leftDays);
+    // const status = await fetch('https://glados.rocks/api/user/status', {
+    //   method: 'GET',
+    //   headers,
+    // }).then((r) => r.json())
+    // console.log('Checkin OK',checkin.message,status.data.leftDays);
+    console.log('Checkin OK',checkin.message);
     return [
       'Checkin OK',
       `${checkin.message}`,
-      `Left Days ${Number(status.data.leftDays)}`,
+      // `Left Days ${Number(status.data.leftDays)}`,
     ]
   } catch (error) {
     console.log('Error:', error);
