@@ -26,4 +26,5 @@ jobs:
       - run: npm run main
         env:
           GLADOS: ${{ secrets.GLADOS }}
+          GLADOS_UA: ${{ secrets.GLADOS_UA }}
           NOTIFY: ${{ secrets.NOTIFY }}
