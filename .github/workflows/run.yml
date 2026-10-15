@@ -13,7 +13,8 @@ jobs:
       - name: Set random delay
         run: |
           # 生成随机的延迟时间，范围是 0 到 3600 秒
-          RANDOM_DELAY=$((RANDOM % 3600))
+          # RANDOM_DELAY=$((RANDOM % 3600))
+          RANDOM_DELAY=1
           echo "Sleeping for $RANDOM_DELAY seconds..."
           sleep $RANDOM_DELAY
 
