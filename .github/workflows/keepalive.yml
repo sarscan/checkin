@@ -2,7 +2,7 @@ name: Keep GitHub Actions Active
 
 on:
   schedule:
-    - cron: "12 3 26 * *"   # 每月26号 UTC 03:00 自动执行
+    - cron: "30 3 26 * *"   # 每月26号 UTC 03:00 自动执行
   workflow_dispatch:      # 可以手动执行一次
 
 permissions:
